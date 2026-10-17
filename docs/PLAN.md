@@ -298,11 +298,25 @@ Estimates assume me building with you reviewing; calendar time depends on your r
 
 ---
 
-## 10. Decisions needed before Phase 0
+## 10. Decisions
 
-1. **AI model setup:** A (Opus 5.5 everywhere, ~$0.35/prospect) or B (Haiku 5.5 + Sonnet 5.5, ~$0.10/prospect)? Recommendation: start with A while tuning prompts, switch steps to B once the eval set shows no quality loss.
-2. **Sending mailbox:** Google Workspace on a separate outreach domain (recommended) — confirm.
-3. **Sender identity + postal address** for the CAN-SPAM footer.
-4. **Paid contact-data vendor** in Phase 4 (Hunter / Apollo / none).
-5. **Who uses the tool:** just you, or a small team (affects roles/permissions in Phase 0)?
-6. **Product claims list:** which features are live today vs. roadmap (drafts will only reference live ones).
+| # | Topic | Decision |
+|---|---|---|
+| 1 | AI model setup | Open — see cost breakdown below |
+| 2 | Sending mailbox | Deferred to Phase 3 (not needed for Phases 0–2) |
+| 3 | Sender identity + postal address | Deferred to Phase 3; sending is hard-blocked until set |
+| 4 | Paid contact-data vendor | None. Contacts come only from prospects' own websites, public records, and CSV |
+| 5 | Users | Single user. Simple allow-listed login; no roles/permissions UI |
+| 6 | Product claims | Product is in beta. Drafts present it as a beta / early-access offer; only features you mark "working in beta" may be described |
+
+### Where the AI cost goes (per prospect, by step)
+
+Costs apply to every prospect the system **processes**, not to every email sent. Sending through Gmail has no per-email cost.
+
+| Step | Runs on | Setup A (Opus 5.5) | Setup B (Haiku + Sonnet 5.5) |
+|---|---|---|---|
+| Research (read their site, extract facts) | every prospect found/imported | ~$0.18 | ~$0.025 |
+| Qualification score | every researched prospect | ~$0.05 | ~$0.025 |
+| Drafts (first touch + 2 follow-ups) | qualified prospects only | ~$0.13 | ~$0.065 |
+
+Example, 1,000 prospects found, ~50% qualify: A ≈ $295, B ≈ $85. Fixed costs while not yet sending (Phases 0–2): Vercel Pro $20 + Supabase $0–25.
