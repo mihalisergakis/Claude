@@ -267,7 +267,8 @@ Estimates assume me building with you reviewing; calendar time depends on your r
 - Vercel deploy with preview environments.
 - **You:** create Supabase + Vercel + Anthropic accounts; buy the outreach domain.
 
-### Phase 1 — Database, import, research, qualification, dashboard (~2 weeks)
+### Phase 1 — Database, import, discovery, research, qualification, dashboard (~2 weeks)
+- On-demand "Find prospects" (moved up from Phase 4 since there's no paid data vendor): web search for businesses' own websites → research → score.
 - Prospect list (filter, sort, search, saved views) and detail page with facts + sources.
 - CSV import: upload → column mapping → preview → dedupe report → commit. CSV export of any filtered view.
 - Research job (website fetch + structured extraction → `facts`).
